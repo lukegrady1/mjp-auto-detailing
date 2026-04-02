@@ -1,0 +1,118 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Phone } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
+];
+
+export function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 w-full bg-[#ddd9cd] border-b border-border">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src="/logo.png"
+            alt="Matty P's Auto Detailing"
+            width={140}
+            height={140}
+            priority
+          />
+        </Link>
+
+        {/* Desktop: nav links + phone + CTA */}
+        <div className="hidden items-center gap-8 md:flex">
+          <ul className="flex items-center gap-6">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm font-medium uppercase tracking-wider text-text-secondary hover:text-accent transition"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="tel:+15085550123"
+            className="flex items-center gap-2 font-mono text-sm text-text-secondary hover:text-accent transition"
+          >
+            <Phone className="w-4 h-4" />
+            (508) 555-0123
+          </a>
+
+          <Link
+            href="/book"
+            className="rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white hover:bg-accent-hover transition"
+          >
+            Book Now
+          </Link>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button
+          type="button"
+          className="inline-flex items-center justify-center p-2 text-text-primary md:hidden"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          aria-expanded={mobileOpen}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      <div
+        className={cn(
+          "overflow-hidden transition-all duration-300 ease-in-out md:hidden bg-[#d4d0c4]",
+          mobileOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <ul className="flex flex-col gap-1 border-t border-border px-4 py-4 sm:px-6">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className="block py-3 text-sm font-medium uppercase tracking-wider text-text-secondary hover:text-accent transition"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+          <li className="py-2">
+            <a
+              href="tel:+15085550123"
+              className="flex items-center gap-2 font-mono text-sm text-text-secondary"
+            >
+              <Phone className="w-4 h-4" />
+              (508) 555-0123
+            </a>
+          </li>
+          <li className="pt-2">
+            <Link
+              href="/book"
+              className="inline-block rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white hover:bg-accent-hover transition"
+              onClick={() => setMobileOpen(false)}
+            >
+              Book Now
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </header>
+  );
+}

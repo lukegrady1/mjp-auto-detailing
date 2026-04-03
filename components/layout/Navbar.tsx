@@ -18,12 +18,12 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#ddd9cd] border-b border-border">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-border">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/logo.png"
+            src="/logo.PNG"
             alt="Matty P's Auto Detailing"
             width={140}
             height={140}
@@ -77,7 +77,7 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "overflow-hidden transition-all duration-300 ease-in-out md:hidden bg-[#d4d0c4]",
+          "overflow-hidden transition-all duration-300 ease-in-out md:hidden bg-white",
           mobileOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
         )}
       >

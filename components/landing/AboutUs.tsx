@@ -61,7 +61,7 @@ export function AboutUs() {
             <div className="md:col-span-2">
               <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden border border-border">
                 <Image
-                  src="/owner.svg"
+                  src="/mjp-auto-detailing/owner.svg"
                   alt="MJP Auto Detailing owner"
                   fill
                   className="object-cover"

@@ -30,7 +30,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <Image
-                src="/owner.svg"
+                src="/mjp-auto-detailing/owner.svg"
                 alt="Owner of MJP Auto Detailing"
                 width={320}
                 height={427}

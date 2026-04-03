@@ -23,7 +23,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/logo.PNG"
+            src="/mjp-auto-detailing/logo.PNG"
             alt="Matty P's Auto Detailing"
             width={140}
             height={140}

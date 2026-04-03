@@ -16,7 +16,7 @@ export function Hero() {
       {/* MOBILE: image block on top */}
       <div className="relative h-[50vh] md:hidden">
         <Image
-          src="/hero.png"
+          src="/mjp-auto-detailing/hero.PNG"
           alt="Detailed car"
           fill
           className="object-cover"
@@ -80,7 +80,7 @@ export function Hero() {
         {/* RIGHT — hero image (desktop only) */}
         <div className="hidden md:block absolute top-0 right-0 bottom-0 w-[50%]">
           <Image
-            src="/hero.png"
+            src="/mjp-auto-detailing/hero.PNG"
             alt="Detailed car"
             fill
             className="object-cover"

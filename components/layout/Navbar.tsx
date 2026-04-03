@@ -47,11 +47,11 @@ export function Navbar() {
           </ul>
 
           <a
-            href="tel:+15085550123"
+            href="tel:+17742870447"
             className="flex items-center gap-2 font-mono text-sm text-text-secondary hover:text-accent transition"
           >
             <Phone className="w-4 h-4" />
-            (508) 555-0123
+            (774) 287-0447
           </a>
 
           <Link
@@ -95,11 +95,11 @@ export function Navbar() {
           ))}
           <li className="py-2">
             <a
-              href="tel:+15085550123"
+              href="tel:+17742870447"
               className="flex items-center gap-2 font-mono text-sm text-text-secondary"
             >
               <Phone className="w-4 h-4" />
-              (508) 555-0123
+              (774) 287-0447
             </a>
           </li>
           <li className="pt-2">

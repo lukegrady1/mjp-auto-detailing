@@ -53,11 +53,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+15085550123"
+                  href="tel:+17742870447"
                   className="flex items-center gap-2.5 text-sm text-text-muted hover:text-text-secondary transition"
                 >
                   <Phone className="h-4 w-4 flex-shrink-0 text-accent" />
-                  (508) 555-0123
+                  (774) 287-0447
                 </a>
               </li>
               <li className="flex items-center gap-2.5 text-sm text-text-muted">

@@ -43,10 +43,10 @@ export default function ContactPage() {
                   Phone
                 </h3>
                 <a
-                  href="tel:+15085550123"
+                  href="tel:+17742870447"
                   className="text-accent font-medium hover:underline"
                 >
-                  (508) 555-0123
+                  (774) 287-0447
                 </a>
                 <p className="text-text-secondary text-sm mt-2 leading-relaxed">
                   Call or text anytime. We typically respond within an hour

@@ -13,22 +13,10 @@ const fadeUp = (delay: number) => ({
 export function Hero() {
   return (
     <section className="hero-dark relative min-h-[90vh] bg-[#0A0A0A] overflow-hidden">
-      {/* MOBILE: image block on top */}
-      <div className="relative h-[50vh] md:hidden">
-        <Image
-          src="/mjp-auto-detailing/hero.PNG"
-          alt="Detailed car"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/30 via-transparent to-[#0A0A0A]" />
-      </div>
-
       {/* DESKTOP: two-column layout */}
       <div className="relative flex flex-col md:flex-row md:min-h-[90vh]">
         {/* LEFT — editorial content */}
-        <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-20 xl:px-28 py-16 md:py-0 md:w-[55%]">
+        <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-20 xl:px-28 py-20 md:py-0 md:w-[55%]">
           <motion.p
             {...fadeUp(0)}
             className="text-xs font-medium uppercase tracking-wide text-[#555555] mb-8"

@@ -58,7 +58,7 @@ export function AboutUs() {
             </div>
 
             {/* Owner photo */}
-            <div className="md:col-span-2">
+            <div className="hidden md:block md:col-span-2">
               <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden border border-border">
                 <Image
                   src="/mjp-auto-detailing/owner.svg"

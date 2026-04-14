@@ -18,7 +18,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-border">
+    <header className="sticky top-0 z-50 w-full border-b border-border" style={{ backgroundColor: "#221e1f" }}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link
@@ -34,8 +34,8 @@ export function Navbar() {
           <Image
             src="/mjp-auto-detailing/logo.PNG"
             alt="Matty P's Auto Detailing"
-            width={140}
-            height={140}
+            width={180}
+            height={180}
             priority
           />
         </Link>
@@ -47,7 +47,7 @@ export function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm font-medium uppercase tracking-wider text-text-secondary hover:text-accent transition"
+                  className="text-sm font-medium uppercase tracking-wider text-white hover:text-accent transition"
                 >
                   {link.label}
                 </Link>
@@ -57,7 +57,7 @@ export function Navbar() {
 
           <a
             href="tel:+17742870447"
-            className="flex items-center gap-2 font-mono text-sm text-text-secondary hover:text-accent transition"
+            className="flex items-center gap-2 font-mono text-sm text-white hover:text-accent transition"
           >
             <Phone className="w-4 h-4" />
             (774) 287-0447
@@ -74,7 +74,7 @@ export function Navbar() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="inline-flex items-center justify-center p-2 text-text-primary md:hidden"
+          className="inline-flex items-center justify-center p-2 text-white md:hidden"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-expanded={mobileOpen}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -86,16 +86,16 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "overflow-hidden transition-all duration-300 ease-in-out md:hidden bg-white",
+          "overflow-hidden transition-all duration-300 ease-in-out md:hidden",
           mobileOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <ul className="flex flex-col gap-1 border-t border-border px-4 py-4 sm:px-6">
+        <ul className="flex flex-col gap-1 border-t border-white/20 px-4 py-4 sm:px-6">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="block py-3 text-sm font-medium uppercase tracking-wider text-text-secondary hover:text-accent transition"
+                className="block py-3 text-sm font-medium uppercase tracking-wider text-white hover:text-accent transition"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -105,7 +105,7 @@ export function Navbar() {
           <li className="py-2">
             <a
               href="tel:+17742870447"
-              className="flex items-center gap-2 font-mono text-sm text-text-secondary"
+              className="flex items-center gap-2 font-mono text-sm text-white"
             >
               <Phone className="w-4 h-4" />
               (774) 287-0447

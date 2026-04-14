@@ -59,12 +59,13 @@ export function AboutUs() {
 
             {/* Owner photo */}
             <div className="hidden md:block md:col-span-2">
-              <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden border border-border">
+              <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden flex items-center justify-center" style={{ backgroundColor: "#221e1f" }}>
                 <Image
-                  src="/mjp-auto-detailing/owner.svg"
-                  alt="MJP Auto Detailing owner"
-                  fill
-                  className="object-cover"
+                  src="/mjp-auto-detailing/logo.PNG"
+                  alt="Matty P's Auto Detailing"
+                  width={300}
+                  height={300}
+                  className="object-contain"
                 />
               </div>
             </div>

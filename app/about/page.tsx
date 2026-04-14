@@ -29,13 +29,15 @@ export default function AboutPage() {
         <section className="bg-background max-w-6xl mx-auto px-4 pb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
-              <Image
-                src="/mjp-auto-detailing/owner.svg"
-                alt="Owner of MJP Auto Detailing"
-                width={320}
-                height={427}
-                className="rounded-sm aspect-[3/4] border-2 border-border object-cover"
-              />
+              <div className="rounded-sm aspect-[3/4] flex items-center justify-center" style={{ backgroundColor: "#221e1f" }}>
+                <Image
+                  src="/mjp-auto-detailing/logo.PNG"
+                  alt="Matty P's Auto Detailing"
+                  width={300}
+                  height={300}
+                  className="object-contain"
+                />
+              </div>
             </div>
             <div className="space-y-5">
               <p className="text-text-secondary text-lg leading-relaxed">

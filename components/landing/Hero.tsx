@@ -12,7 +12,7 @@ const fadeUp = (delay: number) => ({
 
 export function Hero() {
   return (
-    <section className="hero-dark relative min-h-[90vh] bg-[#0A0A0A] overflow-hidden">
+    <section className="hero-dark relative md:min-h-[90vh] bg-[#0A0A0A] overflow-hidden">
       {/* DESKTOP: two-column layout */}
       <div className="relative flex flex-col md:flex-row md:min-h-[90vh]">
         {/* LEFT — editorial content */}

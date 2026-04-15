@@ -23,7 +23,7 @@ const variants = {
 
 function BookingFunnel() {
   const searchParams = useSearchParams();
-  const { step, formData, updateFormData, nextStep, prevStep, submitForm, isSubmitted } =
+  const { step, formData, updateFormData, nextStep, prevStep, submitForm, isSubmitted, resetForm } =
     useBookingForm();
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function BookingFunnel() {
   }, [searchParams]);
 
   if (isSubmitted) {
-    return <ConfirmationScreen formData={formData} />;
+    return <ConfirmationScreen formData={formData} onReset={resetForm} />;
   }
 
   const direction = 1;

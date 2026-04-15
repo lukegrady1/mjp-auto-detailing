@@ -15,9 +15,36 @@ export function useBookingForm() {
   const nextStep = () => setStep((s) => Math.min(s + 1, 4));
   const prevStep = () => setStep((s) => Math.max(s - 1, 1));
 
-  const submitForm = () => {
-    // TODO: trigger notification here (SMS/email — future phase)
-    console.log("Booking submitted:", formData);
+  const submitForm = async () => {
+    try {
+      await fetch(
+        "https://services.leadconnectorhq.com/hooks/znW1EQZJ5ZYXpD8jCyMN/webhook-trigger/lMqob2sXuBfevEi4sQLC",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            zip: formData.zip,
+            selectedService: formData.selectedService,
+            vehicleYear: formData.vehicleYear,
+            vehicleMake: formData.vehicleMake,
+            vehicleModel: formData.vehicleModel,
+            vehicleColor: formData.vehicleColor,
+            vehicleCondition: formData.vehicleCondition,
+            hasAnimals: formData.hasAnimals,
+            hasSmokeOdor: formData.hasSmokeOdor,
+            additionalNotes: formData.additionalNotes,
+            preferredContact: formData.preferredContact,
+            preferredTime: formData.preferredTime,
+          }),
+        }
+      );
+    } catch (err) {
+      console.error("Failed to send to GoHighLevel:", err);
+    }
     setIsSubmitted(true);
   };
 

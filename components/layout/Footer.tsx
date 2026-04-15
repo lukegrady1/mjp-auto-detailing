@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone } from "lucide-react";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -73,6 +73,17 @@ export function Footer() {
                 >
                   <FaInstagram className="h-4 w-4 flex-shrink-0 text-accent" />
                   @mjpdetails
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/mattypautodetail"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2.5 text-sm text-text-muted hover:text-text-secondary transition"
+                >
+                  <FaFacebook className="h-4 w-4 flex-shrink-0 text-accent" />
+                  MJP Auto Detailing
                 </a>
               </li>
             </ul>

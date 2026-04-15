@@ -82,7 +82,7 @@ export default function ContactPage() {
                 </p>
                 <p className="text-text-secondary text-sm mt-2 leading-relaxed">
                   We&apos;re a mobile service &mdash; we come to you anywhere in
-                  Worcester County. No shop to visit.
+                  Worcester County.
                 </p>
               </div>
 

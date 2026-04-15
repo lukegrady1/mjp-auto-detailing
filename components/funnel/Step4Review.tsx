@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { BookingFormData } from "@/lib/types";
 import { SERVICES } from "@/lib/services";
 import { Separator } from "@/components/ui/separator";
@@ -7,12 +8,18 @@ import { Badge } from "@/components/ui/badge";
 
 interface Step4ReviewProps {
   formData: BookingFormData;
-  onSubmit: () => void;
+  onSubmit: () => void | Promise<void>;
   onBack: () => void;
 }
 
 export function Step4Review({ formData, onSubmit, onBack }: Step4ReviewProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const service = SERVICES.find((s) => s.slug === formData.selectedService);
+
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    await onSubmit();
+  };
 
   return (
     <div>
@@ -99,10 +106,11 @@ export function Step4Review({ formData, onSubmit, onBack }: Step4ReviewProps) {
           </button>
           <button
             type="button"
-            onClick={onSubmit}
-            className="bg-accent text-white text-sm font-semibold uppercase tracking-wider py-4 rounded-sm hover:bg-accent-hover transition w-full"
+            onClick={handleSubmit}
+            disabled={isSubmitting}
+            className="bg-accent text-white text-sm font-semibold uppercase tracking-wider py-4 rounded-sm hover:bg-accent-hover transition w-full disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Submit Request
+            {isSubmitting ? "Submitting..." : "Submit Request"}
           </button>
           <p className="text-text-muted text-xs text-center mt-4">
             By submitting, you agree to be contacted about your detailing

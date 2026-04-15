@@ -8,9 +8,10 @@ import { CheckCircle } from "lucide-react";
 
 interface ConfirmationScreenProps {
   formData: BookingFormData;
+  onReset: () => void;
 }
 
-export function ConfirmationScreen({ formData }: ConfirmationScreenProps) {
+export function ConfirmationScreen({ formData, onReset }: ConfirmationScreenProps) {
   const service = SERVICES.find((s) => s.slug === formData.selectedService);
 
   return (
@@ -49,12 +50,13 @@ export function ConfirmationScreen({ formData }: ConfirmationScreenProps) {
         >
           Back to Home
         </Link>
-        <Link
-          href="/book"
-          className="text-text-muted text-sm font-semibold uppercase tracking-wider hover:text-text-primary transition mt-4 block"
+        <button
+          type="button"
+          onClick={onReset}
+          className="text-text-muted text-sm font-semibold uppercase tracking-wider hover:text-text-primary transition mt-4 block mx-auto"
         >
           Book another service
-        </Link>
+        </button>
       </motion.div>
     </div>
   );

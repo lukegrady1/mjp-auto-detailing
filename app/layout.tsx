@@ -22,24 +22,36 @@ const azeretMono = Azeret_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MJP Auto Detailing | West Boylston, MA",
+  title: "MJP Auto Detailing | Professional Mobile Auto Detailing | West Boylston, MA",
   description:
-    "Professional mobile auto detailing in West Boylston, Worcester, and surrounding Massachusetts communities. Book online today.",
+    "Professional mobile auto detailing serving West Boylston, Worcester, Holden, Sterling, Shrewsbury, and all of Central Massachusetts. Exterior and interior detailing, paint correction, and headlight restoration — we bring showroom-quality results directly to your driveway or workplace. Fully insured and IDA certified. Book online today.",
   keywords: [
     "auto detailing",
     "West Boylston",
     "Worcester MA",
     "mobile detailing",
-    // "ceramic coating",
     "car detail near me",
+    "interior detail",
+    "exterior detail",
+    "paint correction",
+    "headlight restoration",
+    "Central Massachusetts",
   ],
   openGraph: {
-    title: "MJP Auto Detailing",
-    description: "Premium auto detailing serving West Boylston and Central MA.",
+    title: "MJP Auto Detailing | Professional Mobile Auto Detailing in Central MA",
+    description: "Professional mobile auto detailing serving West Boylston, Worcester, and all of Central Massachusetts. Exterior and interior detailing, paint correction, headlight restoration, and more. Fully insured and IDA certified — we come to you. Book online today.",
     url: "https://mjpautodetailing.com",
     siteName: "MJP Auto Detailing",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://mjpautodetailing.com/logo.webp",
+        width: 512,
+        height: 512,
+        alt: "MJP Auto Detailing Logo",
+      },
+    ],
   },
 };
 

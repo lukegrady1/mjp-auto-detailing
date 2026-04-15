@@ -84,6 +84,17 @@ export function Footer() {
           <p className="text-xs text-text-muted">
             &copy; {new Date().getFullYear()} MJP Auto Detailing. All rights reserved.
           </p>
+          <p className="text-xs text-text-muted mt-2">
+            Website by{" "}
+            <a
+              href="https://gradydigital.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:text-accent-hover transition"
+            >
+              Grady Digital
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -29,13 +29,74 @@ const beforeAfterProjects = [
     before: "/mjp-auto-detailing/joes_towing_interior_before.PNG",
     after: "/mjp-auto-detailing/joes_towing_interior_after.PNG",
   },
+  {
+    service: "Interior Detail",
+    note: "Full interior detail. Deep cleaned and restored.",
+    before: "/mjp-auto-detailing/denali_before.PNG",
+    after: "/mjp-auto-detailing/denali_after.PNG",
+  },
+  {
+    service: "Interior Detail",
+    note: "Passenger side deep clean and extraction.",
+    before: "/mjp-auto-detailing/denali_passenger_side_before.PNG",
+    after: "/mjp-auto-detailing/denali_passenger_side_after.PNG",
+  },
+  {
+    service: "Interior Detail",
+    note: "Complete interior cleaning and conditioning.",
+    before: "/mjp-auto-detailing/ford_before.PNG",
+    after: "/mjp-auto-detailing/ford_after.PNG",
+  },
+  {
+    service: "Interior Detail",
+    note: "Passenger side interior restored to like-new condition.",
+    before: "/mjp-auto-detailing/xyz_platinum_passenger_side_before.PNG",
+    after: "/mjp-auto-detailing/xyz_platinum_passenger_side_after.PNG",
+  },
+  {
+    service: "Interior Detail",
+    note: "Driver side interior deep cleaned and conditioned.",
+    before: "/mjp-auto-detailing/bmw_driver_side_interior_before.PNG",
+    after: "/mjp-auto-detailing/bmw_driver_side_interior_after.PNG",
+  },
+  {
+    service: "Interior Detail",
+    note: "Driver side interior fully cleaned and restored.",
+    before: "/mjp-auto-detailing/xyz_platinum_driver_side_before.PNG",
+    after: "/mjp-auto-detailing/xyz_platinum_driver_side_after.PNG",
+  },
 ];
 
 const singlePhotos = [
   {
+    service: "Interior Detail",
+    note: "Interior cleaned and refreshed.",
+    image: "/mjp-auto-detailing/white_truck_interior.PNG",
+  },
+  {
     service: "Exterior Detail",
     note: "Exterior detail completed and looking sharp.",
     image: "/mjp-auto-detailing/joes_towing_exterior.PNG",
+  },
+  {
+    service: "Exterior Detail",
+    note: "Full exterior wash, clay bar, and sealant.",
+    image: "/mjp-auto-detailing/truck_exterior.PNG",
+  },
+  {
+    service: "Exterior Detail",
+    note: "Exterior cleaned and sealed.",
+    image: "/mjp-auto-detailing/xyz_truck_exterior.PNG",
+  },
+  {
+    service: "Exterior Detail",
+    note: "Exterior washed, decontaminated, and sealed.",
+    image: "/mjp-auto-detailing/green_truck_exterior.PNG",
+  },
+  {
+    service: "Exterior Detail",
+    note: "Hand wash, clay bar, and sealant application.",
+    image: "/mjp-auto-detailing/xyz_truck_exterior_2.PNG",
   },
 ];
 

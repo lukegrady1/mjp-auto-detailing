@@ -24,11 +24,8 @@ export function Navbar() {
         <Link
           href="/"
           className="flex-shrink-0"
-          onClick={(e) => {
-            if (window.location.pathname === "/") {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           <Image

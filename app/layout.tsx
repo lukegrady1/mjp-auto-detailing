@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Outfit, Azeret_Mono } from "next/font/google";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -74,6 +75,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-text-primary">
+        <ScrollToTop />
         {children}
       </body>
     </html>

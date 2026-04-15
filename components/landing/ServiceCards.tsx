@@ -50,11 +50,11 @@ export function ServiceCards() {
         </Reveal>
 
         {/* Service cards grid */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerContainer className="flex flex-wrap justify-center gap-6">
           {SERVICES.map((service) => {
             const Icon = iconMap[service.icon];
             return (
-              <StaggerItem key={service.slug}>
+              <StaggerItem key={service.slug} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                 <Link
                   href={`/services/${service.slug}`}
                   className="block bg-surface p-6 rounded-sm border-l-3 border-l-accent/0 hover:border-l-accent transition-all duration-300 group h-full"

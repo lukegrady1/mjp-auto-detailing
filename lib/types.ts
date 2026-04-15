@@ -2,7 +2,7 @@ export type ServiceSlug =
   | "exterior-detail"
   | "interior-detail"
   | "full-detail"
-  | "ceramic-coating"
+  // | "ceramic-coating"
   | "paint-correction"
   | "headlight-restoration";
 

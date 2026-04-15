@@ -3,7 +3,7 @@
 import { Reveal } from "@/components/ui/reveal";
 
 const brands = [
-  "Ceramic Pro",
+  // "Ceramic Pro",
   "P&S",
   "Gyeon",
   "Chemical Guys",

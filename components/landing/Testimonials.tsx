@@ -5,20 +5,23 @@ const testimonials = [
     quote:
       "My car hadn\u2019t been cleaned in months and they made it look new. Very thorough job on the interior.",
     reviewer: "John D.",
-    vehicle: "2022 BMW 3 Series",
   },
   {
     quote:
-      "They came to my office parking lot and had it done by lunch. Couldn\u2019t be easier.",
+      "Super convenient and the results speak for themselves. My car looked brand new when they were done.",
     reviewer: "Sarah M.",
-    vehicle: "2021 Ford F-150",
   },
   {
     quote:
-      "Got the ceramic coating done in November. Still beading water in April.",
-    reviewer: "Mike R.",
-    vehicle: "2023 Tesla Model 3",
+      "Been detailing my cars and trucks for the last four or five years. Can\u2019t get a better job anywhere.",
+    reviewer: "Joe B.",
   },
+  // {
+  //   quote:
+  //     "Got the ceramic coating done in November. Still beading water in April.",
+  //   reviewer: "Mike R.",
+  //   vehicle: "2023 Tesla Model 3",
+  // },
 ];
 
 export function Testimonials() {
@@ -43,9 +46,6 @@ export function Testimonials() {
                 </p>
                 <p className="text-text-primary text-sm font-medium">
                   {testimonial.reviewer}
-                </p>
-                <p className="text-text-muted text-xs font-mono">
-                  {testimonial.vehicle}
                 </p>
               </div>
             </Reveal>

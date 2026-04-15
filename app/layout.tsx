@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "West Boylston",
     "Worcester MA",
     "mobile detailing",
-    "ceramic coating",
+    // "ceramic coating",
     "car detail near me",
   ],
   openGraph: {

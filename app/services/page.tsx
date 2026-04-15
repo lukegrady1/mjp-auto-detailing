@@ -8,7 +8,7 @@ import { SERVICES, SERVICE_DETAILS } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Auto Detailing Services | MJP Auto Detailing | West Boylston, MA",
   description:
-    "Explore our full menu of professional mobile auto detailing services in Central Massachusetts. Exterior detail, interior detail, full detail, ceramic coating, paint correction, and headlight restoration. We come to you in West Boylston, Worcester, and surrounding towns.",
+    "Explore our full menu of professional mobile auto detailing services in Central Massachusetts. Exterior detail, interior detail, full detail, paint correction, and headlight restoration. We come to you in West Boylston, Worcester, and surrounding towns.",
 };
 
 export default function ServicesPage() {

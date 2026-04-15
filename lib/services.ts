@@ -25,14 +25,14 @@ export const SERVICES: Service[] = [
     duration: "3–4 hrs",
     icon: "Star",
   },
-  {
-    slug: "ceramic-coating",
-    name: "Ceramic Coating",
-    description: "Long-lasting paint protection. Hydrophobic, scratch-resistant finish.",
-    startingPrice: 499,
-    duration: "Full day",
-    icon: "Shield",
-  },
+  // {
+  //   slug: "ceramic-coating",
+  //   name: "Ceramic Coating",
+  //   description: "Long-lasting paint protection. Hydrophobic, scratch-resistant finish.",
+  //   startingPrice: 499,
+  //   duration: "Full day",
+  //   icon: "Shield",
+  // },
   {
     slug: "paint-correction",
     name: "Paint Correction",
@@ -252,80 +252,80 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
         answer:
           "Yes. The full detail is priced lower than booking both services individually because we can work more efficiently in a single visit.",
       },
-      {
-        question: "Can I add ceramic coating to a full detail?",
-        answer:
-          "Absolutely. A full detail is actually the recommended prep before applying a ceramic coating. We can bundle the two.",
-      },
+      // {
+      //   question: "Can I add ceramic coating to a full detail?",
+      //   answer:
+      //     "Absolutely. A full detail is actually the recommended prep before applying a ceramic coating. We can bundle the two.",
+      // },
     ],
   },
-  "ceramic-coating": {
-    slug: "ceramic-coating",
-    name: "Ceramic Coating",
-    metaTitle: "Ceramic Coating | MJP Auto Detailing | West Boylston, MA",
-    metaDescription:
-      "Professional ceramic coating application in West Boylston and Worcester, MA. Long-lasting hydrophobic paint protection. Includes paint correction prep. Mobile service.",
-    headline: "Ceramic Coating",
-    intro:
-      "A ceramic coating is a liquid polymer that bonds to your vehicle's paint and creates a durable, hydrophobic layer of protection. Water beads and rolls off. Dirt and contaminants don't stick as easily. UV rays are blocked. The coating lasts 2–5 years depending on the product and maintenance, far outlasting any wax or sealant.",
-    whatsIncluded: [
-      "Full exterior wash and decontamination",
-      "Single-stage paint correction (included)",
-      "Paint surface prep with IPA wipe",
-      "Ceramic coating application (all painted surfaces)",
-      "Trim and wheel coating (optional add-on)",
-      "24-hour curing period guidance",
-    ],
-    process: [
-      {
-        step: "Wash and decontamination",
-        description:
-          "A thorough wash followed by clay bar and iron remover to strip all contaminants from the paint surface.",
-      },
-      {
-        step: "Paint correction",
-        description:
-          "A single-stage machine polish to remove light swirl marks and scratches. The coating locks in whatever condition the paint is in, so the surface needs to be clean first.",
-      },
-      {
-        step: "Surface prep",
-        description:
-          "An IPA (isopropyl alcohol) wipe-down removes any polishing oils so the coating bonds directly to the clear coat.",
-      },
-      {
-        step: "Coating application",
-        description:
-          "The ceramic coating is applied panel by panel with an applicator pad, then leveled with a microfiber towel. Each panel is inspected under LED lighting.",
-      },
-      {
-        step: "Curing",
-        description:
-          "The coating needs 24 hours to fully cure. We'll provide care instructions for the curing period and ongoing maintenance tips.",
-      },
-    ],
-    pricing:
-      "Starting at $499 for sedans. SUVs and trucks start at $599. Multi-layer coatings and add-ons (wheels, trim, glass) quoted individually.",
-    duration: "Full day (6–8 hours including prep)",
-    bestFor:
-      "New vehicles, recently painted vehicles, or any car where the owner wants long-term paint protection without frequent waxing. Especially valuable for dark-colored vehicles that show swirl marks easily.",
-    faq: [
-      {
-        question: "How long does ceramic coating last?",
-        answer:
-          "The coatings we use last 2–5 years depending on the product tier, driving conditions, and how well you maintain the vehicle. We'll discuss options and recommend the right one for your situation.",
-      },
-      {
-        question: "Can you coat a vehicle that has scratches?",
-        answer:
-          "We include a single-stage paint correction with every ceramic coating to address light swirls and scratches. For heavier damage, we recommend our full Paint Correction service first.",
-      },
-      {
-        question: "Do I still need to wash the car after coating?",
-        answer:
-          "Yes, but it's much easier. Dirt doesn't bond to the surface the same way, so a simple rinse often does the job. No waxing needed.",
-      },
-    ],
-  },
+  // "ceramic-coating": {
+  //   slug: "ceramic-coating",
+  //   name: "Ceramic Coating",
+  //   metaTitle: "Ceramic Coating | MJP Auto Detailing | West Boylston, MA",
+  //   metaDescription:
+  //     "Professional ceramic coating application in West Boylston and Worcester, MA. Long-lasting hydrophobic paint protection. Includes paint correction prep. Mobile service.",
+  //   headline: "Ceramic Coating",
+  //   intro:
+  //     "A ceramic coating is a liquid polymer that bonds to your vehicle's paint and creates a durable, hydrophobic layer of protection. Water beads and rolls off. Dirt and contaminants don't stick as easily. UV rays are blocked. The coating lasts 2–5 years depending on the product and maintenance, far outlasting any wax or sealant.",
+  //   whatsIncluded: [
+  //     "Full exterior wash and decontamination",
+  //     "Single-stage paint correction (included)",
+  //     "Paint surface prep with IPA wipe",
+  //     "Ceramic coating application (all painted surfaces)",
+  //     "Trim and wheel coating (optional add-on)",
+  //     "24-hour curing period guidance",
+  //   ],
+  //   process: [
+  //     {
+  //       step: "Wash and decontamination",
+  //       description:
+  //         "A thorough wash followed by clay bar and iron remover to strip all contaminants from the paint surface.",
+  //     },
+  //     {
+  //       step: "Paint correction",
+  //       description:
+  //         "A single-stage machine polish to remove light swirl marks and scratches. The coating locks in whatever condition the paint is in, so the surface needs to be clean first.",
+  //     },
+  //     {
+  //       step: "Surface prep",
+  //       description:
+  //         "An IPA (isopropyl alcohol) wipe-down removes any polishing oils so the coating bonds directly to the clear coat.",
+  //     },
+  //     {
+  //       step: "Coating application",
+  //       description:
+  //         "The ceramic coating is applied panel by panel with an applicator pad, then leveled with a microfiber towel. Each panel is inspected under LED lighting.",
+  //     },
+  //     {
+  //       step: "Curing",
+  //       description:
+  //         "The coating needs 24 hours to fully cure. We'll provide care instructions for the curing period and ongoing maintenance tips.",
+  //     },
+  //   ],
+  //   pricing:
+  //     "Starting at $499 for sedans. SUVs and trucks start at $599. Multi-layer coatings and add-ons (wheels, trim, glass) quoted individually.",
+  //   duration: "Full day (6–8 hours including prep)",
+  //   bestFor:
+  //     "New vehicles, recently painted vehicles, or any car where the owner wants long-term paint protection without frequent waxing. Especially valuable for dark-colored vehicles that show swirl marks easily.",
+  //   faq: [
+  //     {
+  //       question: "How long does ceramic coating last?",
+  //       answer:
+  //         "The coatings we use last 2–5 years depending on the product tier, driving conditions, and how well you maintain the vehicle. We'll discuss options and recommend the right one for your situation.",
+  //     },
+  //     {
+  //       question: "Can you coat a vehicle that has scratches?",
+  //       answer:
+  //         "We include a single-stage paint correction with every ceramic coating to address light swirls and scratches. For heavier damage, we recommend our full Paint Correction service first.",
+  //     },
+  //     {
+  //       question: "Do I still need to wash the car after coating?",
+  //       answer:
+  //         "Yes, but it's much easier. Dirt doesn't bond to the surface the same way, so a simple rinse often does the job. No waxing needed.",
+  //     },
+  //   ],
+  // },
   "paint-correction": {
     slug: "paint-correction",
     name: "Paint Correction",
@@ -341,7 +341,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       "Paint depth readings with a thickness gauge",
       "Multi-stage machine polishing",
       "Panel-by-panel inspection under LED lights",
-      "Paint sealant or coating prep (your choice)",
+      "Paint sealant application",
     ],
     process: [
       {
@@ -367,14 +367,14 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       {
         step: "Protection",
         description:
-          "After correction, the paint is either sealed with a sealant or prepped for ceramic coating, depending on what you choose.",
+          "After correction, the paint is sealed with a high-quality sealant to lock in the results and protect the finish.",
       },
     ],
     pricing:
       "Starting at $349 for a single-stage correction on a sedan. Multi-stage correction for severe defects starts at $549. Pricing depends on vehicle size and paint condition.",
     duration: "4–6 hours for single-stage. 8–12 hours for multi-stage.",
     bestFor:
-      "Vehicles with visible swirl marks, scratches from automatic car washes, water spots, oxidation, or generally dull paint. Also the recommended prep step before ceramic coating for best results.",
+      "Vehicles with visible swirl marks, scratches from automatic car washes, water spots, oxidation, or generally dull paint.",
     faq: [
       {
         question: "What's the difference between single-stage and multi-stage correction?",

@@ -43,7 +43,7 @@ export function Hero() {
             className="text-[#999999] text-lg leading-relaxed max-w-md"
           >
             Mobile detailing across Central Massachusetts. Exterior, interior,
-            ceramic coating, and paint correction&nbsp;&mdash; we come to you.
+            paint correction, and more&nbsp;&mdash; we come to you.
           </motion.p>
 
           <motion.div

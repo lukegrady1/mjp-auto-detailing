@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -6,39 +7,35 @@ import { Footer } from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Gallery | MJP Auto Detailing | West Boylston, MA",
   description:
-    "View before and after results from MJP Auto Detailing. See real transformations on vehicles in West Boylston, Worcester, and Central Massachusetts.",
+    "View results from MJP Auto Detailing. See real transformations on vehicles in West Boylston, Worcester, and Central Massachusetts.",
 };
 
-const projects = [
+const beforeAfterProjects = [
   {
-    service: "Full Detail",
-    vehicle: "2022 BMW 330i — Black",
-    note: "Full interior and exterior detail. Heavy pet hair removal, clay bar, and sealant.",
-  },
-  {
-    service: "Ceramic Coating",
-    vehicle: "2023 Tesla Model 3 — White",
-    note: "Single-stage paint correction followed by a 2-year ceramic coating.",
+    service: "Interior Detail",
+    note: "Full interior deep clean. Vacuumed, steam cleaned, and extracted.",
+    before: "/mjp-auto-detailing/suv_before.PNG",
+    after: "/mjp-auto-detailing/suv_after.PNG",
   },
   {
     service: "Interior Detail",
-    vehicle: "2019 Jeep Wrangler — Silver",
-    note: "Deep interior cleaning after a season of trail use. Steam cleaned and extracted.",
+    note: "Complete interior restoration. Seats, carpet, and all surfaces cleaned.",
+    before: "/mjp-auto-detailing/truck_before.PNG",
+    after: "/mjp-auto-detailing/truck_after.PNG",
   },
   {
-    service: "Paint Correction",
-    vehicle: "2021 Audi A4 — Navarra Blue",
-    note: "Multi-stage correction to remove dealership wash swirls. Before and after under LED.",
+    service: "Interior Detail",
+    note: "Deep interior cleaning. Steam cleaned and extracted.",
+    before: "/mjp-auto-detailing/joes_towing_interior_before.PNG",
+    after: "/mjp-auto-detailing/joes_towing_interior_after.PNG",
   },
+];
+
+const singlePhotos = [
   {
     service: "Exterior Detail",
-    vehicle: "2020 Ford F-150 — Oxford White",
-    note: "Hand wash, clay bar, and sealant. Fleet vehicle for a local contractor.",
-  },
-  {
-    service: "Headlight Restoration",
-    vehicle: "2016 Honda Civic — Grey",
-    note: "Severely yellowed headlights restored to clear. Passed MA inspection afterward.",
+    note: "Exterior detail completed and looking sharp.",
+    image: "/mjp-auto-detailing/joes_towing_exterior.PNG",
   },
 ];
 
@@ -60,33 +57,71 @@ export default function GalleryPage() {
         </section>
 
         <p className="text-text-secondary text-center mb-16 px-4">
-          Before and after results from recent details in the West Boylston and
-          Worcester area.
+          Results from recent details in the West Boylston and Worcester area.
         </p>
 
-        {/* Gallery Grid */}
-        <section className="pb-20 px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+        {/* Before & After Grid */}
+        <section className="pb-12 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            {beforeAfterProjects.map((project, i) => (
               <div
-                key={project.vehicle}
+                key={i}
                 className="bg-surface rounded-sm border-l-3 border-l-accent overflow-hidden"
               >
-                {/* Before placeholder */}
-                <div className="bg-surface-raised rounded-sm h-48 flex items-center justify-center m-3 mb-0">
-                  <span className="text-text-muted text-xs font-medium uppercase tracking-wide">Before</span>
+                <div className="relative aspect-[4/3] m-4 mb-0 rounded-sm overflow-hidden">
+                  <Image
+                    src={project.before}
+                    alt={`${project.service} — Before`}
+                    fill
+                    className="object-cover"
+                  />
+                  <span className="absolute top-2 left-2 bg-black/60 text-white text-[10px] font-medium uppercase tracking-wide px-2 py-1 rounded-sm">
+                    Before
+                  </span>
                 </div>
-                {/* After placeholder */}
-                <div className="bg-surface-raised rounded-sm h-48 flex items-center justify-center m-3">
-                  <span className="text-text-muted text-xs font-medium uppercase tracking-wide">After</span>
+                <div className="relative aspect-[4/3] m-4 rounded-sm overflow-hidden">
+                  <Image
+                    src={project.after}
+                    alt={`${project.service} — After`}
+                    fill
+                    className="object-cover"
+                  />
+                  <span className="absolute top-2 left-2 bg-black/60 text-white text-[10px] font-medium uppercase tracking-wide px-2 py-1 rounded-sm">
+                    After
+                  </span>
                 </div>
-                {/* Caption */}
-                <div className="p-4 pt-0">
-                  <p className="text-text-primary font-medium">
+                <div className="p-5 pt-0">
+                  <p className="text-text-primary font-medium text-lg">
                     {project.service}
                   </p>
-                  <p className="text-xs text-text-secondary">
-                    {project.vehicle}
+                  <p className="text-text-muted text-sm mt-1">
+                    {project.note}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Single Photos Grid */}
+        <section className="pb-20 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            {singlePhotos.map((project, i) => (
+              <div
+                key={i}
+                className="bg-surface rounded-sm border-l-3 border-l-accent overflow-hidden"
+              >
+                <div className="relative aspect-[4/3] m-4 rounded-sm overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.service}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5 pt-0">
+                  <p className="text-text-primary font-medium text-lg">
+                    {project.service}
                   </p>
                   <p className="text-text-muted text-sm mt-1">
                     {project.note}
@@ -104,10 +139,8 @@ export default function GalleryPage() {
               About Our Work
             </h2>
             <p className="text-text-secondary leading-relaxed mb-4">
-              Every vehicle we work on gets documented before and after. These
-              photos are taken under the same lighting conditions to show the
-              actual difference, not a camera trick. What you see here is what
-              you can expect when you book with us.
+              Every vehicle we work on gets documented. What you see here is
+              what you can expect when you book with us.
             </p>
             <p className="text-text-secondary leading-relaxed">
               Have a vehicle you&apos;d like to see in this gallery? Book a

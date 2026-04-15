@@ -60,7 +60,7 @@ export default function AboutPage() {
               <p className="text-text-secondary text-lg leading-relaxed">
                 What sets MJP apart is an uncompromising attention to detail.
                 Every wash follows a proper multi-step process. Every polish is
-                guided by paint thickness readings. Every coating is applied in
+                guided by paint thickness readings. Every sealant is applied in
                 controlled conditions to ensure proper bonding. We never cut
                 corners, because the results speak for themselves and our
                 reputation depends on every single job.
@@ -95,7 +95,7 @@ export default function AboutPage() {
                   We exclusively use professional-grade products from trusted
                   brands like P&amp;S, Gyeon, and Chemical Guys. You will never
                   see off-the-shelf consumer products in our setup. Every soap,
-                  sealant, coating, and dressing is selected for its performance
+                  sealant, and dressing is selected for its performance
                   and safety on your vehicle&apos;s surfaces, because the
                   products you use matter just as much as the technique.
                 </p>

@@ -34,7 +34,7 @@ export function AboutUs() {
               <p className="text-text-secondary leading-relaxed mb-4">
                 Every vehicle gets the same level of care. We use only trusted
                 products and take the time to do things right, from a basic wash
-                to a full ceramic coating.
+                to a full paint correction.
               </p>
               <p className="text-text-secondary leading-relaxed mb-8">
                 Fully insured. IDA certified. Serving Central Massachusetts.

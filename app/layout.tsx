@@ -22,9 +22,9 @@ const azeretMono = Azeret_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MJP Auto Detailing | Professional Mobile Auto Detailing | West Boylston, MA",
+  title: "MJP Auto Detailing | Mobile Detailing | West Boylston",
   description:
-    "Professional mobile auto detailing serving West Boylston, Worcester, Holden, Sterling, Shrewsbury, and all of Central Massachusetts. Exterior and interior detailing, paint correction, and headlight restoration — we bring showroom-quality results directly to your driveway or workplace. Fully insured and IDA certified. Book online today.",
+    "Professional mobile auto detailing in West Boylston, Worcester, and Central MA. Interior, exterior, paint correction, and more. Fully insured. Book today.",
   keywords: [
     "auto detailing",
     "West Boylston",

@@ -31,7 +31,7 @@ export default function AboutPage() {
             <div className="flex justify-center">
               <div className="rounded-sm aspect-[3/4] flex items-center justify-center" style={{ backgroundColor: "#221e1f" }}>
                 <Image
-                  src="/mjp-auto-detailing/logo.webp"
+                  src="/logo.webp"
                   alt="Matty P's Auto Detailing"
                   width={300}
                   height={300}

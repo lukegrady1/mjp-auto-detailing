@@ -29,7 +29,7 @@ export function Navbar() {
           }}
         >
           <Image
-            src="/mjp-auto-detailing/logo.webp"
+            src="/logo.webp"
             alt="Matty P's Auto Detailing"
             width={180}
             height={180}

@@ -68,7 +68,7 @@ export function Hero() {
         {/* RIGHT — hero image (desktop only) */}
         <div className="hidden md:block absolute top-0 right-0 bottom-0 w-[50%]">
           <Image
-            src="/mjp-auto-detailing/hero.webp"
+            src="/hero.webp"
             alt="Detailed car"
             fill
             className="object-cover"

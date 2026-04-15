@@ -61,7 +61,7 @@ export function AboutUs() {
             <div className="hidden md:block md:col-span-2">
               <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden flex items-center justify-center" style={{ backgroundColor: "#221e1f" }}>
                 <Image
-                  src="/mjp-auto-detailing/logo.PNG"
+                  src="/mjp-auto-detailing/logo.webp"
                   alt="Matty P's Auto Detailing"
                   width={300}
                   height={300}

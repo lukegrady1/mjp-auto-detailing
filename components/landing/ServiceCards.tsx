@@ -68,6 +68,11 @@ export function ServiceCards() {
                   <p className="text-text-secondary text-sm mb-4">
                     {service.description}
                   </p>
+                  {service.notice && (
+                    <p className="text-text-muted text-xs italic mb-4">
+                      *{service.notice}
+                    </p>
+                  )}
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-accent text-sm">
                       From ${service.startingPrice}

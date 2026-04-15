@@ -55,6 +55,11 @@ export function Step1Service({ selectedService, onSelect }: Step1ServiceProps) {
               <p className="text-text-secondary text-sm mb-3">
                 {service.description}
               </p>
+              {service.notice && (
+                <p className="text-text-muted text-xs italic mb-3">
+                  *{service.notice}
+                </p>
+              )}
               <div className="flex items-center justify-between">
                 <span className="font-mono text-accent text-sm">
                   From ${service.startingPrice}

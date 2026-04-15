@@ -17,6 +17,7 @@ export interface Service {
   startingPrice: number;
   duration: string;
   icon: string;
+  notice?: string;
 }
 
 export interface BookingFormData {

@@ -105,9 +105,15 @@ export default function ServicesPage() {
                       </div>
 
                       {/* Pricing Note */}
-                      <p className="text-text-muted text-sm mb-6">
+                      <p className="text-text-muted text-sm mb-2">
                         {detail.pricing}
                       </p>
+                      {service.notice && (
+                        <p className="text-text-muted text-xs italic mb-6">
+                          *{service.notice}
+                        </p>
+                      )}
+                      {!service.notice && <div className="mb-6" />}
 
                       {/* CTA Links */}
                       <div className="flex flex-wrap gap-4">

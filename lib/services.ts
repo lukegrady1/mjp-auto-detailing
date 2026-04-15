@@ -13,9 +13,10 @@ export const SERVICES: Service[] = [
     slug: "interior-detail",
     name: "Interior Detail",
     description: "Full vacuum, steam clean, leather conditioning, odor treatment.",
-    startingPrice: 129,
+    startingPrice: 120,
     duration: "2–3 hrs",
     icon: "Armchair",
+    notice: "Pet hair & stains are an additional charge (starting at +$50 depending on severity).",
   },
   {
     slug: "full-detail",
@@ -24,6 +25,7 @@ export const SERVICES: Service[] = [
     startingPrice: 199,
     duration: "3–4 hrs",
     icon: "Star",
+    notice: "Pet hair & stains are an additional charge (starting at +$50 depending on severity).",
   },
   // {
   //   slug: "ceramic-coating",
@@ -181,7 +183,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
           "Interior glass is cleaned streak-free. An odor neutralizer is applied if needed. Door jambs are wiped down.",
       },
     ],
-    pricing: "Starting at $129. Final price depends on vehicle size and condition level.",
+    pricing: "Starting at $120. Final price depends on vehicle size and condition level.",
     duration: "2–3 hours",
     bestFor:
       "Vehicles with stained carpets, dirty seats, pet hair, food debris, or general interior neglect. Also good as a seasonal deep clean.",
@@ -237,7 +239,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       },
     ],
     pricing:
-      "Starting at $199. Final price depends on vehicle size and condition. Most sedans run $199–$249. SUVs and trucks typically $249–$349.",
+      "Starting at $199. Final price depends on vehicle size and condition.",
     duration: "3–4 hours",
     bestFor:
       "The best option when the whole vehicle needs work. Popular before selling a car, after a long winter, or as a twice-a-year deep clean.",

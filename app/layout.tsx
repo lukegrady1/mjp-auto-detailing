@@ -83,7 +83,7 @@ export default function RootLayout({
       className={`${bricolage.variable} ${outfit.variable} ${azeretMono.variable} h-full antialiased`}
     >
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y99NR26VCM" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETRKJ4EFNZ" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

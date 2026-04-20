@@ -61,13 +61,15 @@ const jsonLd = {
   name: "MJP Auto Detailing",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "West Boylston",
+    streetAddress: "1 Wilbur Street",
+    addressLocality: "Worcester",
     addressRegion: "MA",
+    postalCode: "01606",
     addressCountry: "US",
   },
-  areaServed: ["West Boylston", "Worcester", "Holden", "Sterling", "Boylston"],
+  areaServed: ["Worcester", "West Boylston", "Holden", "Sterling", "Boylston", "Shrewsbury"],
   priceRange: "$$",
-  telephone: "TBD",
+  telephone: "+17742870447",
 };
 
 export default function RootLayout({

@@ -12,8 +12,14 @@ export function useBookingForm() {
     setFormData((prev) => ({ ...prev, ...fields }));
   };
 
-  const nextStep = () => setStep((s) => Math.min(s + 1, 4));
-  const prevStep = () => setStep((s) => Math.max(s - 1, 1));
+  const nextStep = () => {
+    setStep((s) => Math.min(s + 1, 4));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const prevStep = () => {
+    setStep((s) => Math.max(s - 1, 1));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const submitForm = async () => {
     try {

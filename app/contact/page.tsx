@@ -78,7 +78,7 @@ export default function ContactPage() {
                   Location
                 </h3>
                 <p className="text-text-primary font-medium">
-                  1 Wilbur Street, Worcester, MA 01606
+                  5 Weber Ln, Northborough, MA 01532
                 </p>
                 <p className="text-text-secondary text-sm mt-2 leading-relaxed">
                   We&apos;re a mobile service &mdash; we come to you anywhere in

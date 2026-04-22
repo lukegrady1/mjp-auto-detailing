@@ -61,10 +61,10 @@ const jsonLd = {
   name: "MJP Auto Detailing",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "1 Wilbur Street",
-    addressLocality: "Worcester",
+    streetAddress: "5 Weber Ln",
+    addressLocality: "Northborough",
     addressRegion: "MA",
-    postalCode: "01606",
+    postalCode: "01532",
     addressCountry: "US",
   },
   areaServed: ["Worcester", "West Boylston", "Holden", "Sterling", "Boylston", "Shrewsbury"],

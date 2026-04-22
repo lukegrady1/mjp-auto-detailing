@@ -62,7 +62,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2.5 text-sm text-text-muted">
                 <MapPin className="h-4 w-4 flex-shrink-0 text-accent" />
-                1 Wilbur Street, Worcester, MA 01606
+                5 Weber Ln, Northborough, MA 01532
               </li>
               <li>
                 <a

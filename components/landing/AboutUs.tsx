@@ -26,8 +26,8 @@ export function AboutUs() {
               </h2>
 
               <p className="text-text-secondary leading-relaxed mb-4">
-                MJP Auto Detailing is a mobile detailing service based out of West
-                Boylston, Massachusetts. We bring professional-grade equipment and
+                MJP Auto Detailing is a mobile detailing service based out of
+                Northborough, Massachusetts. We bring professional-grade equipment and
                 products directly to your location — whether that&apos;s your
                 driveway, your office, or anywhere in the Worcester County area.
               </p>

@@ -19,7 +19,7 @@ const trustPoints = [
   {
     icon: MapPin,
     title: "Locally Owned",
-    description: "Based in West Boylston, serving Worcester County.",
+    description: "Based in Northborough, serving Worcester County.",
   },
 ];
 

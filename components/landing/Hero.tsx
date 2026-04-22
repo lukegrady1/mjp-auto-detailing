@@ -21,7 +21,7 @@ export function Hero() {
             {...fadeUp(0)}
             className="text-xs font-medium uppercase tracking-wide text-[#555555] mb-8"
           >
-            EST. 2020 &mdash; WEST BOYLSTON, MA
+            EST. 2020 &mdash; NORTHBOROUGH, MA
           </motion.p>
 
           <motion.h1

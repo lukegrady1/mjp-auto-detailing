@@ -6,9 +6,9 @@ import { Separator } from "@/components/ui/separator";
 import { SERVICES, SERVICE_DETAILS } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "Auto Detailing Services | MJP Auto Detailing | West Boylston, MA",
+  title: "Auto Detailing Services | MJP Auto Detailing | Northborough, MA",
   description:
-    "Explore our full menu of professional mobile auto detailing services in Central Massachusetts. Exterior detail, interior detail, full detail, paint correction, and headlight restoration. We come to you in West Boylston, Worcester, and surrounding towns.",
+    "Explore our full menu of professional mobile auto detailing services in Central Massachusetts. Exterior detail, interior detail, full detail, paint correction, and headlight restoration. We come to you in Northborough, Worcester, and surrounding towns.",
 };
 
 export default function ServicesPage() {
@@ -27,7 +27,7 @@ export default function ServicesPage() {
             </h1>
             <p className="text-text-secondary text-lg leading-relaxed">
               MJP Auto Detailing offers professional mobile detailing across
-              Central Massachusetts, including West Boylston, Worcester, Holden,
+              Central Massachusetts, including Northborough, Worcester, Holden,
               Sterling, Shrewsbury, and the surrounding area. Every service is
               performed on-site at your home or workplace — we bring all of our
               own water, power, and equipment. No drop-off required. Browse our

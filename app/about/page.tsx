@@ -5,9 +5,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About MJP Auto Detailing | West Boylston, MA",
+  title: "About MJP Auto Detailing | Northborough, MA",
   description:
-    "Learn about MJP Auto Detailing, a professional mobile auto detailing service based in West Boylston, MA. IDA certified, fully insured, and committed to delivering showroom-quality results at your location.",
+    "Learn about MJP Auto Detailing, a professional mobile auto detailing service based in Northborough, MA. IDA certified, fully insured, and committed to delivering showroom-quality results at your location.",
 };
 
 export default function AboutPage() {
@@ -42,7 +42,7 @@ export default function AboutPage() {
             <div className="space-y-5">
               <p className="text-text-secondary text-lg leading-relaxed">
                 MJP Auto Detailing is a professional mobile detailing service
-                based in West Boylston, Massachusetts. We bring showroom-quality
+                based in Northborough, Massachusetts. We bring showroom-quality
                 detailing directly to your driveway, office parking lot, or
                 wherever your vehicle is located. Our mission is simple: deliver
                 exceptional results with the convenience of a fully mobile
@@ -153,10 +153,10 @@ export default function AboutPage() {
               Service Area
             </h2>
             <p className="text-text-secondary text-lg leading-relaxed text-center mb-6">
-              West Boylston &middot; Worcester &middot; Holden &middot; Sterling &middot; Boylston &middot; Shrewsbury &middot; Northborough &middot; Westborough &middot; Rutland &middot; Paxton &middot; Princeton &middot; and surrounding communities throughout Worcester County, Massachusetts.
+              Northborough &middot; Worcester &middot; Holden &middot; Sterling &middot; Boylston &middot; Shrewsbury &middot; Northborough &middot; Westborough &middot; Rutland &middot; Paxton &middot; Princeton &middot; and surrounding communities throughout Worcester County, Massachusetts.
             </p>
             <p className="text-text-secondary text-lg leading-relaxed">
-              Our mobile service covers a generous radius from our West Boylston
+              Our mobile service covers a generous radius from our Northborough
               base. Whether you need us at your home, your office, or any other
               convenient location, we will come to you. If you are unsure
               whether your area is within our range, reach out and we will make

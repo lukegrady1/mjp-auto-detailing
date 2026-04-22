@@ -167,7 +167,7 @@ export function Step3Contact({
             <p className="text-danger text-sm mt-1">{errors.zip.message}</p>
           )}
           <p className="text-text-muted text-xs italic mt-2">
-            We currently serve West Boylston, Worcester, Holden, Sterling, and
+            We currently serve Northborough, Worcester, Holden, Sterling, and
             surrounding areas.
           </p>
         </div>

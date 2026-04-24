@@ -13,18 +13,16 @@ interface GoogleReview {
   author: string;
   rating: number;
   text: string;
-  timeAgo: string;
+  timeAgo?: string;
 }
 
 // Add real Google reviews here as they come in
 const reviews: GoogleReview[] = [
-  // Example:
-  // {
-  //   author: "John D.",
-  //   rating: 5,
-  //   text: "Amazing detail job, my car looks brand new!",
-  //   timeAgo: "2 weeks ago",
-  // },
+  {
+    author: "Luke G.",
+    rating: 5,
+    text: "Got my interior detailed by Matt and he did a really great job. My car looked brand new after he was done with it. There were spots I figured were just permanently stained at this point, and he got them out. Seats, carpets, dash, all of it came out great.",
+  },
 ];
 
 function StarRating({ rating }: { rating: number }) {
@@ -75,7 +73,9 @@ function ReviewCarousel({ reviews }: { reviews: GoogleReview[] }) {
             <p className="text-text-primary text-sm font-medium">
               {review.author}
             </p>
-            <p className="text-text-muted text-xs">{review.timeAgo}</p>
+            {review.timeAgo && (
+              <p className="text-text-muted text-xs">{review.timeAgo}</p>
+            )}
           </div>
           <FaGoogle className="w-5 h-5 text-text-muted" />
         </div>

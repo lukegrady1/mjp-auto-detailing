@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -52,13 +53,13 @@ export function Navbar() {
             ))}
           </ul>
 
-          <a
-            href="tel:+17742870447"
+          <PhoneLink
+            location="navbar_desktop"
             className="flex items-center gap-2 font-mono text-sm text-white hover:text-accent transition"
           >
             <Phone className="w-4 h-4" />
             (774) 287-0447
-          </a>
+          </PhoneLink>
 
           <Link
             href="/book"
@@ -100,13 +101,13 @@ export function Navbar() {
             </li>
           ))}
           <li className="py-2">
-            <a
-              href="tel:+17742870447"
+            <PhoneLink
+              location="navbar_mobile"
               className="flex items-center gap-2 font-mono text-sm text-white"
             >
               <Phone className="w-4 h-4" />
               (774) 287-0447
-            </a>
+            </PhoneLink>
           </li>
           <li className="pt-2">
             <Link

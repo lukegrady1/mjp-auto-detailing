@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { BookingFormData, defaultBookingFormData } from "@/lib/types";
+import { trackEvent } from "@/lib/analytics";
 
 export function useBookingForm() {
   const [step, setStep] = useState(1);
@@ -51,6 +52,12 @@ export function useBookingForm() {
     } catch (err) {
       console.error("Failed to send to GoHighLevel:", err);
     }
+    trackEvent("generate_lead", {
+      service: formData.selectedService,
+      vehicle_condition: formData.vehicleCondition,
+      preferred_contact: formData.preferredContact,
+      zip: formData.zip,
+    });
     setIsSubmitted(true);
   };
 

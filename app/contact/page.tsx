@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -42,12 +43,12 @@ export default function ContactPage() {
                 <h3 className="font-serif text-xl font-bold text-text-primary mb-2">
                   Phone
                 </h3>
-                <a
-                  href="tel:+17742870447"
+                <PhoneLink
+                  location="contact_page"
                   className="text-accent font-medium hover:underline"
                 >
                   (774) 287-0447
-                </a>
+                </PhoneLink>
                 <p className="text-text-secondary text-sm mt-2 leading-relaxed">
                   Call or text anytime. We typically respond within an hour
                   during business hours.

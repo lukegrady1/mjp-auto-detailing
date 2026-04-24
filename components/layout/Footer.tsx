@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, Phone } from "lucide-react";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { PhoneLink } from "@/components/ui/PhoneLink";
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -52,13 +53,13 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="tel:+17742870447"
+                <PhoneLink
+                  location="footer"
                   className="flex items-center gap-2.5 text-sm text-text-muted hover:text-text-secondary transition"
                 >
                   <Phone className="h-4 w-4 flex-shrink-0 text-accent" />
                   (774) 287-0447
-                </a>
+                </PhoneLink>
               </li>
               <li className="flex items-center gap-2.5 text-sm text-text-muted">
                 <MapPin className="h-4 w-4 flex-shrink-0 text-accent" />

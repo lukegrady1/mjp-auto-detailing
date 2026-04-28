@@ -75,9 +75,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     metaTitle: "Exterior Auto Detailing | MJP Auto Detailing | Northborough, MA",
     metaDescription:
       "Professional exterior auto detailing in Northborough and Worcester, MA. Hand wash, clay bar treatment, tire dressing, and paint sealant. Mobile service — we come to you.",
-    headline: "Exterior Detail",
+    headline: "Exterior Auto Detailing in Northborough & Worcester, MA",
     intro:
-      "Our exterior detail goes well beyond a standard car wash. Every panel is hand-washed, decontaminated with a clay bar, and sealed to protect the finish. Tires, wheels, trim, and glass all get individual attention. The result is a clean, protected exterior that looks the way it did when you first bought the car.",
+      "Our exterior detail goes well beyond a standard car wash. Every panel is hand-washed, decontaminated with a clay bar, and sealed to protect the finish. Tires, wheels, trim, and glass all get individual attention. The result is a clean, protected exterior that looks the way it did when you first bought the car. Mobile service across Northborough, Worcester, and Central Massachusetts — we come to you.",
     whatsIncluded: [
       "Pre-rinse and foam cannon wash",
       "Hand wash with pH-neutral shampoo",
@@ -143,9 +143,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     metaTitle: "Interior Auto Detailing | MJP Auto Detailing | Northborough, MA",
     metaDescription:
       "Professional interior auto detailing in Northborough and Worcester, MA. Steam cleaning, leather conditioning, odor treatment, and deep extraction. Mobile service.",
-    headline: "Interior Detail",
+    headline: "Interior Auto Detailing in Northborough & Worcester, MA",
     intro:
-      "The interior detail is a thorough cleaning of every surface inside your vehicle. We vacuum, steam clean, condition leather, extract carpet stains, and treat odors. Every vent, crevice, and pocket gets attention. You'll get back a cabin that looks, smells, and feels significantly better.",
+      "The interior detail is a thorough cleaning of every surface inside your vehicle. We vacuum, steam clean, condition leather, extract carpet stains, and treat odors. Every vent, crevice, and pocket gets attention. You'll get back a cabin that looks, smells, and feels significantly better. Mobile service across Northborough, Worcester, and Central Massachusetts.",
     whatsIncluded: [
       "Full vacuum (seats, carpet, trunk)",
       "Steam cleaning of all hard surfaces",
@@ -211,9 +211,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     metaTitle: "Full Auto Detail | MJP Auto Detailing | Northborough, MA",
     metaDescription:
       "Complete interior and exterior auto detailing in Northborough and Worcester, MA. Our most popular package — every surface, inside and out. Mobile service.",
-    headline: "Full Detail",
+    headline: "Full Auto Detailing in Northborough & Worcester, MA",
     intro:
-      "The full detail combines our complete interior and exterior services into one appointment. This is our most popular package and the best value for a vehicle that needs attention everywhere. Inside gets steam cleaned, extracted, and conditioned. Outside gets hand-washed, clay barred, and sealed.",
+      "The full detail combines our complete interior and exterior services into one appointment. This is our most popular package and the best value for a vehicle that needs attention everywhere. Inside gets steam cleaned, extracted, and conditioned. Outside gets hand-washed, clay barred, and sealed. Mobile service across Worcester County and Central Massachusetts — we come to you.",
     whatsIncluded: [
       "Everything in the Exterior Detail",
       "Everything in the Interior Detail",
@@ -334,9 +334,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     metaTitle: "Paint Correction | MJP Auto Detailing | Northborough, MA",
     metaDescription:
       "Professional paint correction in Northborough and Worcester, MA. Machine polishing to remove swirl marks, scratches, and oxidation. Restore your paint to showroom condition.",
-    headline: "Paint Correction",
+    headline: "Paint Correction in Northborough & Worcester, MA",
     intro:
-      "Paint correction is the process of machine polishing your vehicle's clear coat to remove imperfections — swirl marks, scratches, water spots, oxidation, and haze. This is not a cover-up with wax or glaze. It's the physical removal of defects from the paint surface. The result is a smooth, clear finish that reflects light properly.",
+      "Paint correction is the process of machine polishing your vehicle's clear coat to remove imperfections — swirl marks, scratches, water spots, oxidation, and haze. This is not a cover-up with wax or glaze. It's the physical removal of defects from the paint surface. The result is a smooth, clear finish that reflects light properly. Mobile paint correction service across Worcester County and Central Massachusetts.",
     whatsIncluded: [
       "Full wash and decontamination",
       "Clay bar treatment",
@@ -401,9 +401,9 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     metaTitle: "Headlight Restoration | MJP Auto Detailing | Northborough, MA",
     metaDescription:
       "Professional headlight restoration in Northborough and Worcester, MA. Restore yellowed, foggy, or hazy headlights to clear condition. Improves visibility and appearance.",
-    headline: "Headlight Restoration",
+    headline: "Headlight Restoration in Northborough & Worcester, MA",
     intro:
-      "Over time, headlight lenses develop a yellow, hazy, or cloudy appearance caused by UV exposure and oxidation of the polycarbonate plastic. This reduces light output and makes the vehicle look older than it is. Our headlight restoration process removes the damaged layer and applies a UV-resistant sealant to keep them clear.",
+      "Over time, headlight lenses develop a yellow, hazy, or cloudy appearance caused by UV exposure and oxidation of the polycarbonate plastic. This reduces light output and makes the vehicle look older than it is. Our headlight restoration process removes the damaged layer and applies a UV-resistant sealant to keep them clear. Mobile service across Worcester County and Central Massachusetts.",
     whatsIncluded: [
       "Headlight lens cleaning",
       "Wet sanding (progressive grits)",

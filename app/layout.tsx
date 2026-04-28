@@ -22,43 +22,55 @@ const azeretMono = Azeret_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MJP Auto Detailing | Mobile Detailing | West Boylston",
+  metadataBase: new URL("https://mjpautodetailing.com"),
+  title: {
+    default: "MJP Auto Detailing | Mobile Auto Detailing in Northborough, MA",
+    template: "%s | MJP Auto Detailing",
+  },
   description:
-    "Professional mobile auto detailing in West Boylston, Worcester, and Central MA. Interior, exterior, paint correction, and more. Fully insured. Book today.",
-  keywords: [
-    "auto detailing",
-    "West Boylston",
-    "Worcester MA",
-    "mobile detailing",
-    "car detail near me",
-    "interior detail",
-    "exterior detail",
-    "paint correction",
-    "headlight restoration",
-    "Central Massachusetts",
-  ],
+    "Professional mobile auto detailing in Northborough, Worcester, and Central Massachusetts. Interior, exterior, paint correction, and headlight restoration. Fully insured and IDA certified — we come to you. Book online today.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "MJP Auto Detailing | Professional Mobile Auto Detailing in Central MA",
-    description: "Professional mobile auto detailing serving West Boylston, Worcester, and all of Central Massachusetts. Exterior and interior detailing, paint correction, headlight restoration, and more. Fully insured and IDA certified — we come to you. Book online today.",
-    url: "https://mjpautodetailing.com",
+    title: "MJP Auto Detailing | Mobile Auto Detailing in Central MA",
+    description:
+      "Professional mobile auto detailing serving Northborough, Worcester, and all of Central Massachusetts. Exterior and interior detailing, paint correction, and headlight restoration. Fully insured and IDA certified — we come to you.",
+    url: "/",
     siteName: "MJP Auto Detailing",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://mjpautodetailing.com/logo.webp",
+        url: "/logo.webp",
         width: 512,
         height: 512,
         alt: "MJP Auto Detailing Logo",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "MJP Auto Detailing | Mobile Auto Detailing in Central MA",
+    description:
+      "Professional mobile auto detailing serving Northborough, Worcester, and Central Massachusetts. Fully insured and IDA certified — we come to you.",
+    images: ["/logo.webp"],
+  },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "AutoWash",
+  "@type": "LocalBusiness",
+  "@id": "https://mjpautodetailing.com/#business",
   name: "MJP Auto Detailing",
+  description:
+    "Mobile auto detailing service based in Northborough, MA serving Worcester County and Central Massachusetts. Interior detailing, exterior detailing, paint correction, and headlight restoration.",
+  url: "https://mjpautodetailing.com",
+  logo: "https://mjpautodetailing.com/logo.webp",
+  image: "https://mjpautodetailing.com/logo.webp",
+  telephone: "+1-774-287-0447",
+  email: "info@mjpautodetailing.com",
+  priceRange: "$$",
   address: {
     "@type": "PostalAddress",
     streetAddress: "5 Weber Ln",
@@ -67,9 +79,99 @@ const jsonLd = {
     postalCode: "01532",
     addressCountry: "US",
   },
-  areaServed: ["Worcester", "West Boylston", "Holden", "Sterling", "Boylston", "Shrewsbury"],
-  priceRange: "$$",
-  telephone: "+17742870447",
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 42.3186,
+    longitude: -71.6411,
+  },
+  areaServed: [
+    "Northborough, MA",
+    "Worcester, MA",
+    "Holden, MA",
+    "Sterling, MA",
+    "Boylston, MA",
+    "West Boylston, MA",
+    "Shrewsbury, MA",
+    "Westborough, MA",
+    "Rutland, MA",
+    "Paxton, MA",
+    "Princeton, MA",
+    "Worcester County, MA",
+  ],
+  serviceArea: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: 42.3186,
+      longitude: -71.6411,
+    },
+    geoRadius: 40000,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "00:00",
+      closes: "00:00",
+      description: "By appointment",
+    },
+  ],
+  sameAs: [
+    "https://www.instagram.com/mjpdetails/",
+    "https://www.facebook.com/mattypautodetail",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Auto Detailing Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Exterior Auto Detailing",
+          url: "https://mjpautodetailing.com/services/exterior-detail",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Interior Auto Detailing",
+          url: "https://mjpautodetailing.com/services/interior-detail",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Full Auto Detailing",
+          url: "https://mjpautodetailing.com/services/full-detail",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Paint Correction",
+          url: "https://mjpautodetailing.com/services/paint-correction",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Headlight Restoration",
+          url: "https://mjpautodetailing.com/services/headlight-restoration",
+        },
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

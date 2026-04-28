@@ -5,62 +5,81 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Gallery | MJP Auto Detailing | West Boylston, MA",
+  title: { absolute: "Gallery | MJP Auto Detailing | Northborough, MA" },
   description:
-    "View results from MJP Auto Detailing. See real transformations on vehicles in West Boylston, Worcester, and Central Massachusetts.",
+    "View before-and-after results from MJP Auto Detailing. Real interior and exterior transformations on vehicles in Northborough, Worcester, and Central Massachusetts.",
+  alternates: {
+    canonical: "/gallery",
+  },
+  openGraph: {
+    title: "Auto Detailing Gallery | MJP Auto Detailing | Northborough, MA",
+    description:
+      "Before-and-after auto detailing results from Northborough, Worcester, and Central Massachusetts.",
+    url: "/gallery",
+    type: "website",
+  },
 };
 
 const beforeAfterProjects = [
   {
     service: "Interior Detail",
+    vehicle: "SUV",
     note: "Full interior deep clean. Vacuumed, steam cleaned, and extracted.",
     before: "/suv_before.webp",
     after: "/suv_after.webp",
   },
   {
     service: "Interior Detail",
+    vehicle: "Pickup truck",
     note: "Complete interior restoration. Seats, carpet, and all surfaces cleaned.",
     before: "/truck_before.webp",
     after: "/truck_after.webp",
   },
   {
     service: "Interior Detail",
+    vehicle: "Tow truck",
     note: "Deep interior cleaning. Steam cleaned and extracted.",
     before: "/joes_towing_interior_before.webp",
     after: "/joes_towing_interior_after.webp",
   },
   {
     service: "Interior Detail",
+    vehicle: "GMC Denali",
     note: "Full interior detail. Deep cleaned and restored.",
     before: "/denali_before.webp",
     after: "/denali_after.webp",
   },
   {
     service: "Interior Detail",
+    vehicle: "GMC Denali passenger side",
     note: "Passenger side deep clean and extraction.",
     before: "/denali_passenger_side_before.webp",
     after: "/denali_passenger_side_after.webp",
   },
   {
     service: "Interior Detail",
+    vehicle: "Ford",
     note: "Complete interior cleaning and conditioning.",
     before: "/ford_before.webp",
     after: "/ford_after.webp",
   },
   {
     service: "Interior Detail",
+    vehicle: "Ford F-150 Platinum passenger side",
     note: "Passenger side interior restored to like-new condition.",
     before: "/xyz_platinum_passenger_side_before.webp",
     after: "/xyz_platinum_passenger_side_after.webp",
   },
   {
     service: "Interior Detail",
+    vehicle: "BMW driver side",
     note: "Driver side interior deep cleaned and conditioned.",
     before: "/bmw_driver_side_interior_before.webp",
     after: "/bmw_driver_side_interior_after.webp",
   },
   {
     service: "Interior Detail",
+    vehicle: "Ford F-150 Platinum driver side",
     note: "Driver side interior fully cleaned and restored.",
     before: "/xyz_platinum_driver_side_before.webp",
     after: "/xyz_platinum_driver_side_after.webp",
@@ -70,31 +89,37 @@ const beforeAfterProjects = [
 const singlePhotos = [
   {
     service: "Interior Detail",
+    vehicle: "White pickup truck",
     note: "Interior cleaned and refreshed.",
     image: "/white_truck_interior.webp",
   },
   {
     service: "Exterior Detail",
+    vehicle: "Tow truck",
     note: "Exterior detail completed and looking sharp.",
     image: "/joes_towing_exterior.webp",
   },
   {
     service: "Exterior Detail",
+    vehicle: "Pickup truck",
     note: "Full exterior wash, clay bar, and sealant.",
     image: "/truck_exterior.webp",
   },
   {
     service: "Exterior Detail",
+    vehicle: "Pickup truck",
     note: "Exterior cleaned and sealed.",
     image: "/xyz_truck_exterior.webp",
   },
   {
     service: "Exterior Detail",
+    vehicle: "Green pickup truck",
     note: "Exterior washed, decontaminated, and sealed.",
     image: "/green_truck_exterior.webp",
   },
   {
     service: "Exterior Detail",
+    vehicle: "Pickup truck",
     note: "Hand wash, clay bar, and sealant application.",
     image: "/xyz_truck_exterior_2.webp",
   },
@@ -112,13 +137,14 @@ export default function GalleryPage() {
               Recent Projects
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-text-primary">
-              Our Work
+              Auto Detailing Before &amp; After Gallery — Northborough &amp; Worcester, MA
             </h1>
           </div>
         </section>
 
         <p className="text-text-secondary text-center mb-16 px-4">
-          Results from recent details in the West Boylston and Worcester area.
+          Results from recent interior and exterior details in the Northborough
+          and Worcester area.
         </p>
 
         {/* Before & After Grid */}
@@ -132,7 +158,7 @@ export default function GalleryPage() {
                 <div className="relative aspect-[4/3] m-4 mb-0 rounded-sm overflow-hidden">
                   <Image
                     src={project.before}
-                    alt={`${project.service} — Before`}
+                    alt={`${project.vehicle} — ${project.service} before, MJP Auto Detailing in Northborough MA`}
                     fill
                     className="object-cover"
                   />
@@ -143,7 +169,7 @@ export default function GalleryPage() {
                 <div className="relative aspect-[4/3] m-4 rounded-sm overflow-hidden">
                   <Image
                     src={project.after}
-                    alt={`${project.service} — After`}
+                    alt={`${project.vehicle} — ${project.service} after, MJP Auto Detailing in Northborough MA`}
                     fill
                     className="object-cover"
                   />
@@ -175,7 +201,7 @@ export default function GalleryPage() {
                 <div className="relative aspect-[4/3] m-4 rounded-sm overflow-hidden">
                   <Image
                     src={project.image}
-                    alt={project.service}
+                    alt={`${project.vehicle} — ${project.service}, MJP Auto Detailing in Northborough MA`}
                     fill
                     className="object-cover"
                   />

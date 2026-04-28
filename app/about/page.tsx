@@ -5,9 +5,19 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About MJP Auto Detailing | Northborough, MA",
+  title: { absolute: "About MJP Auto Detailing | Northborough, MA" },
   description:
     "Learn about MJP Auto Detailing, a professional mobile auto detailing service based in Northborough, MA. IDA certified, fully insured, and committed to delivering showroom-quality results at your location.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About MJP Auto Detailing | Northborough, MA",
+    description:
+      "Mobile auto detailing service based in Northborough, MA. IDA certified, fully insured, serving Worcester County and Central Massachusetts.",
+    url: "/about",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
@@ -21,7 +31,7 @@ export default function AboutPage() {
             Who We Are
           </p>
           <h1 className="font-serif text-4xl md:text-5xl font-bold">
-            About MJP Auto Detailing
+            About MJP Auto Detailing — Mobile Detailing in Northborough, MA
           </h1>
         </div>
 
@@ -153,7 +163,7 @@ export default function AboutPage() {
               Service Area
             </h2>
             <p className="text-text-secondary text-lg leading-relaxed text-center mb-6">
-              Northborough &middot; Worcester &middot; Holden &middot; Sterling &middot; Boylston &middot; Shrewsbury &middot; Northborough &middot; Westborough &middot; Rutland &middot; Paxton &middot; Princeton &middot; and surrounding communities throughout Worcester County, Massachusetts.
+              Northborough &middot; Worcester &middot; Holden &middot; Sterling &middot; Boylston &middot; West Boylston &middot; Shrewsbury &middot; Westborough &middot; Rutland &middot; Paxton &middot; Princeton &middot; and surrounding communities throughout Worcester County, Massachusetts.
             </p>
             <p className="text-text-secondary text-lg leading-relaxed">
               Our mobile service covers a generous radius from our Northborough

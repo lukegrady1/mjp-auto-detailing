@@ -6,9 +6,19 @@ import { PhoneLink } from "@/components/ui/PhoneLink";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact MJP Auto Detailing | West Boylston, MA",
+  title: { absolute: "Contact MJP Auto Detailing | Northborough, MA" },
   description:
-    "Contact MJP Auto Detailing to book your mobile detailing appointment in West Boylston, Worcester, and Central Massachusetts. Call, text, or email us for a free quote.",
+    "Contact MJP Auto Detailing to book your mobile detailing appointment in Northborough, Worcester, and Central Massachusetts. Call, text, or email us for a free quote.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact MJP Auto Detailing | Northborough, MA",
+    description:
+      "Contact MJP Auto Detailing to book your mobile detailing appointment in Northborough, Worcester, and Central Massachusetts.",
+    url: "/contact",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
@@ -23,7 +33,7 @@ export default function ContactPage() {
               Get In Touch
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-text-primary">
-              Contact Us
+              Contact MJP Auto Detailing — Northborough &amp; Worcester, MA
             </h1>
           </div>
         </section>
@@ -134,9 +144,9 @@ export default function ContactPage() {
                     How far do you travel?
                   </h3>
                   <p className="text-text-secondary leading-relaxed">
-                    We serve all of Worcester County. West Boylston, Worcester,
-                    Holden, Sterling, Shrewsbury, Northborough, and surrounding
-                    towns. If you&apos;re unsure, just ask.
+                    We serve all of Worcester County. Northborough, Worcester,
+                    Holden, Sterling, Shrewsbury, Westborough, Boylston, and
+                    surrounding towns. If you&apos;re unsure, just ask.
                   </p>
                 </div>
 

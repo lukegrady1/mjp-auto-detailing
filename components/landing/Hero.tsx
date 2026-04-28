@@ -31,6 +31,9 @@ export function Hero() {
             MJP
             <br />
             Auto Detailing
+            <span className="sr-only">
+              {" "}— Mobile Auto Detailing in Northborough &amp; Worcester, MA
+            </span>
           </motion.h1>
 
           <motion.div

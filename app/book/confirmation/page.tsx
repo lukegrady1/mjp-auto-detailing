@@ -1,6 +1,19 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: { absolute: "Booking Confirmation | MJP Auto Detailing" },
+  description: "Thanks for booking with MJP Auto Detailing.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: {
+    canonical: "/book/confirmation",
+  },
+};
 
 export default function ConfirmationPage() {
   return (

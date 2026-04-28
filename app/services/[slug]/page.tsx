@@ -6,6 +6,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+const SITE_URL = "https://mjpautodetailing.com";
+
 export function generateStaticParams() {
   return SERVICES.map((service) => ({
     slug: service.slug,
@@ -22,9 +24,24 @@ export async function generateMetadata({
   if (!detail) {
     return {};
   }
+  const path = `/services/${slug}`;
   return {
-    title: detail.metaTitle,
+    title: { absolute: detail.metaTitle },
     description: detail.metaDescription,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      title: detail.metaTitle,
+      description: detail.metaDescription,
+      url: path,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: detail.metaTitle,
+      description: detail.metaDescription,
+    },
   };
 }
 
@@ -40,8 +57,109 @@ export default async function ServiceDetailPage({
     notFound();
   }
 
+  const service = SERVICES.find((s) => s.slug === detail.slug);
+  const relatedServices = SERVICES.filter((s) => s.slug !== detail.slug).slice(0, 3);
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: detail.name,
+    description: detail.metaDescription,
+    serviceType: detail.name,
+    url: `${SITE_URL}/services/${detail.slug}`,
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#business`,
+      name: "MJP Auto Detailing",
+      telephone: "+1-774-287-0447",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "5 Weber Ln",
+        addressLocality: "Northborough",
+        addressRegion: "MA",
+        postalCode: "01532",
+        addressCountry: "US",
+      },
+    },
+    areaServed: [
+      "Northborough, MA",
+      "Worcester, MA",
+      "Holden, MA",
+      "Sterling, MA",
+      "Boylston, MA",
+      "West Boylston, MA",
+      "Shrewsbury, MA",
+      "Westborough, MA",
+      "Worcester County, MA",
+    ],
+    offers: service && {
+      "@type": "Offer",
+      price: service.startingPrice,
+      priceCurrency: "USD",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        price: service.startingPrice,
+        priceCurrency: "USD",
+        valueAddedTaxIncluded: false,
+        description: `Starting price. ${detail.pricing}`,
+      },
+      availability: "https://schema.org/InStock",
+      url: `${SITE_URL}/book?service=${detail.slug}`,
+    },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: detail.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${SITE_URL}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${SITE_URL}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: detail.name,
+        item: `${SITE_URL}/services/${detail.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
       <main className="flex-1 pt-24 pb-16 px-4">
         <div className="max-w-5xl mx-auto">
@@ -145,7 +263,7 @@ export default async function ServiceDetailPage({
                 <div>
                   <p className="text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Starting at</p>
                   <p className="text-accent text-2xl font-bold">
-                    ${SERVICES.find((s) => s.slug === detail.slug)?.startingPrice ?? "---"}
+                    ${service?.startingPrice ?? "---"}
                   </p>
                 </div>
                 <Separator />
@@ -169,6 +287,40 @@ export default async function ServiceDetailPage({
             </aside>
           </div>
 
+          {/* Related Services */}
+          {relatedServices.length > 0 && (
+            <>
+              <Separator className="my-12" />
+              <section aria-labelledby="related-services">
+                <h2
+                  id="related-services"
+                  className="font-serif text-2xl md:text-3xl font-bold text-text-primary mb-6"
+                >
+                  Related Services
+                </h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {relatedServices.map((rel) => (
+                    <Link
+                      key={rel.slug}
+                      href={`/services/${rel.slug}`}
+                      className="block bg-surface p-6 rounded-sm border-l-3 border-l-accent/0 hover:border-l-accent transition-all duration-300 h-full"
+                    >
+                      <h3 className="text-lg font-semibold text-text-primary mb-1">
+                        {rel.name}
+                      </h3>
+                      <p className="text-text-secondary text-sm mb-4">
+                        {rel.description}
+                      </p>
+                      <span className="font-mono text-accent text-sm">
+                        From ${rel.startingPrice}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            </>
+          )}
+
           {/* Bottom CTA */}
           <Separator className="my-12" />
           <div className="text-center">
@@ -176,7 +328,8 @@ export default async function ServiceDetailPage({
               Ready to book?
             </h2>
             <p className="text-text-secondary mb-6">
-              Schedule your {detail.name.toLowerCase()} today. Mobile service — we come to you.
+              Schedule your {detail.name.toLowerCase()} today. Mobile service in
+              Northborough, Worcester, and Central Massachusetts — we come to you.
             </p>
             <Link
               href={`/book?service=${detail.slug}`}

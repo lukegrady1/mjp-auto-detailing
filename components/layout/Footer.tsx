@@ -15,10 +15,10 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-8 sm:gap-10 lg:grid-cols-3">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="col-span-2 space-y-4 lg:col-span-1">
             <Link href="/" className="font-serif text-xl font-bold text-text-primary">
               MJP Auto Detailing
             </Link>
@@ -29,10 +29,10 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="mb-5 text-xs font-medium uppercase tracking-wider text-text-secondary">
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-text-secondary sm:mb-5">
               Navigation
             </h3>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-1">
               {footerLinks.map((link) => (
                 <li key={link.label}>
                   <Link
@@ -48,7 +48,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-5 text-xs font-medium uppercase tracking-wider text-text-secondary">
+            <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-text-secondary sm:mb-5">
               Contact
             </h3>
             <ul className="space-y-3">
@@ -92,7 +92,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 border-t border-border pt-6 text-center">
+        <div className="mt-10 border-t border-border pt-6 text-center sm:mt-14">
           <p className="text-xs text-text-muted">
             &copy; {new Date().getFullYear()} MJP Auto Detailing. All rights reserved.
           </p>

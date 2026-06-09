@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BookNowButton } from "@/components/booking/BookNowButton";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
               Get In Touch
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-text-primary">
-              Contact MJP Auto Detailing — Northborough &amp; Worcester, MA
+              Contact MJP Auto Detailing — Northborough, MA
             </h1>
           </div>
         </section>
@@ -132,9 +132,9 @@ export default function ContactPage() {
                   </h3>
                   <p className="text-text-secondary leading-relaxed">
                     The fastest way is through our{" "}
-                    <Link href="/book" className="text-accent hover:underline">
+                    <BookNowButton className="text-accent hover:underline">
                       online booking form
-                    </Link>
+                    </BookNowButton>
                     . You can also call or text us directly.
                   </p>
                 </div>
@@ -204,12 +204,9 @@ export default function ContactPage() {
             <p className="text-text-secondary mb-6">
               Schedule your mobile detail online in just a few steps.
             </p>
-            <Link
-              href="/book"
-              className="inline-flex items-center bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3 rounded-sm hover:bg-accent-hover transition"
-            >
+            <BookNowButton className="inline-flex items-center bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3 rounded-sm hover:bg-accent-hover transition">
               Book Now
-            </Link>
+            </BookNowButton>
           </div>
         </section>
       </main>

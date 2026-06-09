@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BookNowButton } from "@/components/booking/BookNowButton";
 
 export const metadata: Metadata = {
   title: { absolute: "Gallery | MJP Auto Detailing | Northborough, MA" },
@@ -137,7 +137,7 @@ export default function GalleryPage() {
               Recent Projects
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-text-primary">
-              Auto Detailing Before &amp; After Gallery — Northborough &amp; Worcester, MA
+              Auto Detailing Before &amp; After Gallery — Northborough, MA
             </h1>
           </div>
         </section>
@@ -158,7 +158,7 @@ export default function GalleryPage() {
                 <div className="relative aspect-[4/3] m-4 mb-0 rounded-sm overflow-hidden">
                   <Image
                     src={project.before}
-                    alt={`${project.vehicle} — ${project.service} before, MJP Auto Detailing in Northborough MA`}
+                    alt={`${project.vehicle} — ${project.service} before, MJP Auto Detailing in Northborough, MA`}
                     fill
                     className="object-cover"
                   />
@@ -169,7 +169,7 @@ export default function GalleryPage() {
                 <div className="relative aspect-[4/3] m-4 rounded-sm overflow-hidden">
                   <Image
                     src={project.after}
-                    alt={`${project.vehicle} — ${project.service} after, MJP Auto Detailing in Northborough MA`}
+                    alt={`${project.vehicle} — ${project.service} after, MJP Auto Detailing in Northborough, MA`}
                     fill
                     className="object-cover"
                   />
@@ -201,7 +201,7 @@ export default function GalleryPage() {
                 <div className="relative aspect-[4/3] m-4 rounded-sm overflow-hidden">
                   <Image
                     src={project.image}
-                    alt={`${project.vehicle} — ${project.service}, MJP Auto Detailing in Northborough MA`}
+                    alt={`${project.vehicle} — ${project.service}, MJP Auto Detailing in Northborough, MA`}
                     fill
                     className="object-cover"
                   />
@@ -239,12 +239,9 @@ export default function GalleryPage() {
 
         {/* CTA */}
         <section className="pb-20 px-4 text-center">
-          <Link
-            href="/book"
-            className="inline-flex items-center bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3 rounded-sm hover:bg-accent-hover transition"
-          >
+          <BookNowButton className="inline-flex items-center bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3 rounded-sm hover:bg-accent-hover transition">
             Book a Detail
-          </Link>
+          </BookNowButton>
         </section>
       </main>
       <Footer />

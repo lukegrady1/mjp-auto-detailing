@@ -1,6 +1,7 @@
 import { SERVICES, SERVICE_DETAILS, ServiceDetail } from "@/lib/services";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BookNowButton } from "@/components/booking/BookNowButton";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -104,7 +105,7 @@ export default async function ServiceDetailPage({
         description: `Starting price. ${detail.pricing}`,
       },
       availability: "https://schema.org/InStock",
-      url: `${SITE_URL}/book?service=${detail.slug}`,
+      url: `${SITE_URL}/services/${detail.slug}`,
     },
   };
 
@@ -277,12 +278,12 @@ export default async function ServiceDetailPage({
                   <p className="text-text-secondary text-sm leading-relaxed">{detail.bestFor}</p>
                 </div>
                 <Separator />
-                <Link
-                  href={`/book?service=${detail.slug}`}
+                <BookNowButton
+                  service={detail.slug}
                   className="block w-full text-center bg-accent text-white text-sm font-semibold uppercase tracking-wider py-3 px-6 rounded-sm hover:bg-accent-hover transition"
                 >
                   Book This Service
-                </Link>
+                </BookNowButton>
               </div>
             </aside>
           </div>
@@ -331,12 +332,12 @@ export default async function ServiceDetailPage({
               Schedule your {detail.name.toLowerCase()} today. Mobile service in
               Northborough, Worcester, and Central Massachusetts — we come to you.
             </p>
-            <Link
-              href={`/book?service=${detail.slug}`}
+            <BookNowButton
+              service={detail.slug}
               className="inline-block bg-accent text-white text-sm font-semibold uppercase tracking-wider py-3 px-7 rounded-sm hover:bg-accent-hover transition"
             >
               Book This Service
-            </Link>
+            </BookNowButton>
           </div>
         </div>
       </main>

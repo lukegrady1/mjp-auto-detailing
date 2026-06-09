@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BookNowButton } from "@/components/booking/BookNowButton";
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <div className="space-y-5">
               <p className="text-text-secondary text-lg leading-relaxed">
                 MJP Auto Detailing is a professional mobile detailing service
-                based in Northborough, Massachusetts. We bring showroom-quality
+                based in Northborough, MA. We bring showroom-quality
                 detailing directly to your driveway, office parking lot, or
                 wherever your vehicle is located. Our mission is simple: deliver
                 exceptional results with the convenience of a fully mobile
@@ -166,7 +166,7 @@ export default function AboutPage() {
               Northborough &middot; Worcester &middot; Holden &middot; Sterling &middot; Boylston &middot; West Boylston &middot; Shrewsbury &middot; Westborough &middot; Rutland &middot; Paxton &middot; Princeton &middot; and surrounding communities throughout Worcester County, Massachusetts.
             </p>
             <p className="text-text-secondary text-lg leading-relaxed">
-              Our mobile service covers a generous radius from our Northborough
+              Our mobile service covers a generous radius from our Northborough, MA
               base. Whether you need us at your home, your office, or any other
               convenient location, we will come to you. If you are unsure
               whether your area is within our range, reach out and we will make
@@ -184,12 +184,9 @@ export default function AboutPage() {
             Schedule your detail today and experience the MJP difference
             firsthand.
           </p>
-          <Link
-            href="/book"
-            className="bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3 rounded-sm hover:bg-accent-hover transition inline-block"
-          >
+          <BookNowButton className="bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3 rounded-sm hover:bg-accent-hover transition inline-block">
             Book Your Detail
-          </Link>
+          </BookNowButton>
         </section>
       </main>
       <Footer />

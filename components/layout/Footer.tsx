@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MapPin, Phone } from "lucide-react";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 import { PhoneLink } from "@/components/ui/PhoneLink";
+import { BookNowButton } from "@/components/booking/BookNowButton";
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -9,7 +10,6 @@ const footerLinks = [
   { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
-  { label: "Book Now", href: "/book" },
 ];
 
 export function Footer() {
@@ -43,6 +43,11 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <BookNowButton className="text-xs font-medium uppercase tracking-wider text-text-muted hover:text-accent transition">
+                  Book Now
+                </BookNowButton>
+              </li>
             </ul>
           </div>
 

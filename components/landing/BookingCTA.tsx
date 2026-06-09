@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Reveal } from "@/components/ui/reveal";
+import { BookNowButton } from "@/components/booking/BookNowButton";
 
 export function BookingCTA() {
   return (
@@ -15,12 +15,9 @@ export function BookingCTA() {
           <p className="text-text-secondary text-lg mb-12">
             Pick a service. Tell us about your car. We handle the rest.
           </p>
-          <Link
-            href="/book"
-            className="inline-block bg-accent text-white text-sm font-semibold uppercase tracking-wider px-10 py-4 rounded-sm hover:bg-accent-hover transition"
-          >
+          <BookNowButton className="inline-block bg-accent text-white text-sm font-semibold uppercase tracking-wider px-10 py-4 rounded-sm hover:bg-accent-hover transition">
             Get Started
-          </Link>
+          </BookNowButton>
         </Reveal>
       </div>
     </section>

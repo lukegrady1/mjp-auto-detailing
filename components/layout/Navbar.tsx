@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PhoneLink } from "@/components/ui/PhoneLink";
+import { useBooking } from "@/components/booking/BookingProvider";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -17,6 +18,7 @@ const navLinks = [
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openBooking } = useBooking();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border" style={{ backgroundColor: "#221e1f" }}>
@@ -61,12 +63,13 @@ export function Navbar() {
             (774) 287-0447
           </PhoneLink>
 
-          <Link
-            href="/book"
+          <button
+            type="button"
+            onClick={() => openBooking()}
             className="rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white hover:bg-accent-hover transition"
           >
             Book Now
-          </Link>
+          </button>
         </div>
 
         {/* Mobile hamburger */}
@@ -110,13 +113,16 @@ export function Navbar() {
             </PhoneLink>
           </li>
           <li className="pt-2">
-            <Link
-              href="/book"
+            <button
+              type="button"
               className="inline-block rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white hover:bg-accent-hover transition"
-              onClick={() => setMobileOpen(false)}
+              onClick={() => {
+                setMobileOpen(false);
+                openBooking();
+              }}
             >
               Book Now
-            </Link>
+            </button>
           </li>
         </ul>
       </div>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { BookNowButton } from "@/components/booking/BookNowButton";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 16 },
@@ -53,12 +54,9 @@ export function Hero() {
             {...fadeUp(0.4)}
             className="mt-10 flex items-center"
           >
-            <Link
-              href="/book"
-              className="bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3.5 rounded-sm hover:bg-accent-hover transition"
-            >
+            <BookNowButton className="bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3.5 rounded-sm hover:bg-accent-hover transition">
               Book a Detail
-            </Link>
+            </BookNowButton>
             <Link
               href="/services"
               className="text-[#999999] text-sm font-semibold uppercase tracking-wider hover:text-accent transition ml-6"

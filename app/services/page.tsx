@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BookNowButton } from "@/components/booking/BookNowButton";
 import { Separator } from "@/components/ui/separator";
 import { SERVICES, SERVICE_DETAILS } from "@/lib/services";
 
@@ -136,12 +137,12 @@ export default function ServicesPage() {
                             &rarr;
                           </span>
                         </Link>
-                        <Link
-                          href={`/book?service=${service.slug}`}
+                        <BookNowButton
+                          service={service.slug}
                           className="inline-flex items-center bg-accent text-white text-sm font-semibold uppercase tracking-wider px-7 py-3 rounded-sm hover:bg-accent-hover transition"
                         >
                           Book This Service
-                        </Link>
+                        </BookNowButton>
                       </div>
                     </div>
                   </article>

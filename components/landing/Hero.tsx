@@ -29,11 +29,11 @@ export function Hero() {
             {...fadeUp(0.1)}
             className="font-serif text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] text-[#EBEBEB]"
           >
-            MJP
+            Mobile Auto
             <br />
-            Auto Detailing
-            <span className="sr-only">
-              {" "}— Mobile Auto Detailing in Northborough &amp; Worcester, MA
+            Detailing
+            <span className="block mt-4 font-sans text-xl md:text-2xl lg:text-3xl font-medium tracking-normal text-[#999999]">
+              in Northborough &amp; Worcester, MA
             </span>
           </motion.h1>
 
@@ -46,8 +46,9 @@ export function Hero() {
             {...fadeUp(0.3)}
             className="text-[#999999] text-lg leading-relaxed max-w-md"
           >
-            Mobile detailing across Central Massachusetts. Exterior, interior,
-            paint correction, and more&nbsp;&mdash; we come to you.
+            MJP Auto Detailing brings exterior, interior, paint correction,
+            and more to your driveway across Central Massachusetts&nbsp;&mdash; we
+            come to you.
           </motion.p>
 
           <motion.div
